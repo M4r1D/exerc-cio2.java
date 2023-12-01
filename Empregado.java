@@ -1,33 +1,47 @@
 package exercicio_2;
 
-public class Empregado extends Pessoa {
-	String matricula;
-	double salario;
+public class Empregado extends Pessoa{
+	int codigoSetor;
+	int salario;
+	int imposto;
 	
 	public Empregado() {
 		
 	}
-    public Empregado(String matricula) {
-		this.matricula=matricula;
+	public Empregado(int codigoSetor) {
+		this.codigoSetor = codigoSetor;
 	}
-    public Empregado(String matricula, double salario) {
-		this.matricula=matricula;
+    public Empregado(int codigoSetor, int salario) {
+    	this.codigoSetor = codigoSetor;
 		this.salario = salario;
 	}
-	public String getMatricula() {
-		return matricula;
-	}
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
-	}
-	public double getSalario() {
-		return salario;
-	}
-	public void setSalario(double salario) {
+    public Empregado(int codigoSetor, int salario, int imposto) {
+    	this.codigoSetor = codigoSetor;
 		this.salario = salario;
+		this.imposto = imposto;
 	}
 	
-	public double ValorInss(double ValorInss) {
-		return salario*11;
+	public double calcularSalario() {
+		return salario-imposto;
 	}
+	public int getCodigoSetor() {
+		return codigoSetor;
+	}
+	public void setCodigoSetor(int codigoSetor) {
+		this.codigoSetor = codigoSetor;
+	}
+	public int getSalario() {
+		return salario;
+	}
+	public void setSalario(int salario) {
+		this.salario = salario;
+	}
+	public int getImposto() {
+		return imposto;
+	}
+	public void setImposto(int imposto) {
+		this.imposto = imposto;
+	}
+	
+	
 }
